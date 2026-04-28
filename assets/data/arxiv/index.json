@@ -1,9 +1,23 @@
 {
-  "updated_at": "2026-04-27T06:59:05.498095+00:00",
-  "total_days": 121,
-  "latest_date": "2026-04-27",
+  "updated_at": "2026-04-28T07:00:01.867878+00:00",
+  "total_days": 122,
+  "latest_date": "2026-04-28",
   "oldest_date": "2025-12-28",
   "days": [
+    {
+      "date": "2026-04-28",
+      "filename": "2026-04-28.json",
+      "path": "/assets/data/arxiv/daily/2026-04-28.json",
+      "total_count": 412,
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "fetched_at": "2026-04-28T07:00:01.343783+00:00"
+    },
     {
       "date": "2026-04-27",
       "filename": "2026-04-27.json",
