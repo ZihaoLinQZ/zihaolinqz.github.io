@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a third-year Ph.D. student at UC Davis, working on multimodal models. I am fortunate to be advised by [Prof. Lifu Huang](https://wilburone.github.io/). 
-Introduce myself! My research focuses on multimodal understanding and generation, encompassing image editing, image generation, and video understanding, to bridge perception and generation through unified multimodal frameworks. I also explore RL-trained and LLM/MLLM-based agents, applying agent frameworks to diverse real-world applications such as design document editing and medical reasoning. My broader interests include retrieval-augmented generation (RAG), interpretability, and the development of efficient, scalable architectures for multimodal intelligence.
+I am a third-year Ph.D. student at UC Davis, working on multimodal agents, self-evolving harness and video understanding. I am fortunate to be advised by [Prof. Lifu Huang](https://wilburone.github.io/). 
+Introduce myself! My research focuses on multimodal understanding and generation, encompassing image editing, image generation, and video understanding, to bridge perception and generation through unified multimodal frameworks. I also explore RL-trained and LLM/MLLM-based agents, applying agent frameworks to diverse real-world applications such as design document editing and medical reasoning. My broader interests include retrieval-augmented generation (RAG), interpretability, and the development of efficient, scalable architectures for multimodal intelligence. Now, I am especially interested in 
 
 Before joining UC Davis, I obtained my master's degree from Duke University in 2022, majoring in Electronic and Computer Engineering. Before that, I obtained my bachelor's degree from Southern University of Science and Technology in 2019, majoring in Financial Mathematics.
 
@@ -16,6 +16,10 @@ I am always open to collaboration in many domains. If you want to collaborate wi
 
 Experiences
 ------
+**Research Scientist Intern @ [Meta MRS Research Team](https://ai.meta.com/research/)**    
+Host: [Qifan Wang](https://wqfcr.github.io)    
+June 2026 - Sep. 2026
+
 **Research Intern @ [Adobe Research](https://research.adobe.com/)**    
 Host: [Wanrong Zhu](https://wanrong-zhu.com/)    
 June 2025 - Nov. 2025
@@ -34,6 +38,8 @@ Feb. 2023 - June 2023
 
 News
 ======
+* **08/20/2026**: One paper about multi-layer multi-modal document editing has been accepted to TMLR 2026.
+* **07/31/2026**: Two papers about agentic video editing and game video glitch detection have been accepted to ACMMM 2026.
 * **01/04/2026**: One paper about conversational user simulation has been accepted to EACL 2026.
 * **12/26/2025**: I will join Meta as a Research Scientist Intern in June 2026.
 * **11/03/2025**: One paper about reasoning-based multi-layer design document editing accepted to NeurIPS 2025 Workshop Multimodal Algorithm Reasoning, awarded as a spotlight paper.
