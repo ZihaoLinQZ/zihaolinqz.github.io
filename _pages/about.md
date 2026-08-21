@@ -20,17 +20,13 @@ Experiences
 Host: [Qifan Wang](https://wqfcr.github.io)    
 June 2026 - Sep. 2026
 
-**Research Intern @ [Adobe Research](https://research.adobe.com/)**    
+**Research Scientist Intern @ [Adobe Research](https://research.adobe.com/)**    
 Host: [Wanrong Zhu](https://wanrong-zhu.com/)    
 June 2025 - Nov. 2025
 
-**Research Intern @ [Adobe Research](https://research.adobe.com/)**    
+**Research Scientist Intern @ [Adobe Research](https://research.adobe.com/)**    
 Host: [Zichao (Jack) Wang](https://zichaow.github.io/)    
 May 2024 - Nov. 2024
-
-**Research Scientist @ Symbiotic Matrix (Startup)**    
-Leader: [Lin Zhang (CEO)](https://lin-zhang-alpha.github.io/)
-June 2023 - Sep. 2023
 
 **Research Intern @ [IDEA Research](https://idea.edu.cn/)**    
 Host: [Haiqin Yang](https://hqyang.github.io/homepage/index.html)
@@ -38,6 +34,7 @@ Feb. 2023 - June 2023
 
 News
 ======
+* **08/20/2026**: One paper about zero-shot 3D Visual Grounding has been accepted to EMNLP 2026.
 * **08/20/2026**: One paper about multi-layer multi-modal document editing has been accepted to TMLR 2026.
 * **07/31/2026**: Two papers about agentic video editing and game video glitch detection have been accepted to ACMMM 2026.
 * **01/04/2026**: One paper about conversational user simulation has been accepted to EACL 2026.
