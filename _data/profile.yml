@@ -1,0 +1,72 @@
+# Shared by the homepage and the CV page.
+
+# Google Scholar statistics shown on the homepage. Update these by hand.
+citations:
+  total: 974
+  first_corresponding: 426
+  h_index: 14
+  updated: "Oct 2026"
+
+# Entries with `cv_only: true` appear on /cv/ but not on the homepage.
+experience:
+  - org: "Meta"
+    role: "Research Scientist Intern, MRS Research Team"
+    host: "Qifan Wang"
+    host_url: "https://wqfcr.github.io"
+    org_url: "https://ai.meta.com/research/"
+    dates: "Jun 2026 – Sep 2026"
+  - org: "Adobe Research"
+    role: "Research Scientist Intern"
+    host: "Wanrong Zhu"
+    host_url: "https://wanrong-zhu.com/"
+    org_url: "https://research.adobe.com/"
+    dates: "Jun 2025 – Nov 2025"
+  - org: "Adobe Research"
+    role: "Research Scientist Intern"
+    host: "Zichao (Jack) Wang"
+    host_url: "https://zichaow.github.io/"
+    org_url: "https://research.adobe.com/"
+    dates: "May 2024 – Nov 2024"
+  - org: "Symbiotic Matrix"
+    role: "Tech Leader"
+    host: "Lin Zhang (CEO)"
+    dates: "Jun 2023 – Sep 2023"
+    cv_only: true
+  - org: "IDEA Research"
+    role: "Research Intern"
+    host: "Haiqin Yang"
+    host_url: "https://hqyang.github.io/homepage/index.html"
+    org_url: "https://idea.edu.cn/"
+    dates: "Feb 2023 – Jun 2023"
+
+education:
+  - school: "University of California, Davis"
+    degree: "Ph.D. in Computer Science"
+    detail: "Advisor: Prof. Lifu Huang"
+    dates: "2025 – Present"
+  - school: "Virginia Tech"
+    degree: "Ph.D. student in Computer and Information Sciences (transferred to UC Davis)"
+    detail: "Advisor: Prof. Lifu Huang"
+    dates: "2023 – 2024"
+  - school: "Duke University"
+    degree: "M.S. in Electrical & Computer Engineering"
+    gpa: "3.74/4.0"
+    dates: "2020 – 2022"
+  - school: "Southern University of Science and Technology"
+    degree: "B.S. in Financial Mathematics"
+    gpa: "3.76/4.0"
+    dates: "2015 – 2019"
+
+service: "Reviewer for ACL ARR (2024–2025), EMNLP (2024–2025), ICLR (2025–2026), NAACL (2025), and COLM (2025)."
+
+patents:
+  - title: "Suggested Question Generation Using Machine-Learning"
+    authors: "Zichao Wang, Zihao Lin, Varun Manjunatha, Tong Sun, Jiuxiang Gu, Ryan Rossi"
+    detail: "U.S. Patent App. No. P13454 (Pending)"
+
+skills:
+  - { name: "Languages", value: "Python, JavaScript, C++" }
+  - { name: "Frameworks", value: "PyTorch, Hugging Face Transformers, LangChain" }
+  - { name: "Tools", value: "Git, Docker, Linux" }
+
+cv_pdf: "/files/Zihao_Lin_UCD.pdf"

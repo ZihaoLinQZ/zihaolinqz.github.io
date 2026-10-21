@@ -1,23 +1,15 @@
 ---
-layout: archive
+layout: modern-page
 permalink: /year-archive/
-title: "Blog posts"
-author_profile: true
+title: "Blog"
+subtitle: "Notes on multimodal agents, self-evolving systems, and research life."
+nav: blog
 redirect_from:
   - /wordpress/blog-posts/
 ---
 
-Coming soon.
-
-{% comment %}
-{% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
-{% endcomment %}
+<div class="empty-state">
+  <i class="fas fa-pen-nib"></i>
+  <p>Posts are coming soon.</p>
+  <a href="{{ '/' | relative_url }}#publications">Browse publications in the meantime →</a>
+</div>

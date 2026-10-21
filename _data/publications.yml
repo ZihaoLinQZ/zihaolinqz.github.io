@@ -1,6 +1,6 @@
 # Publications shown on the homepage, newest first.
 #   abbr        short name used on research-interest chips and the venue badge
-#   areas       any of: agents, evolving, reasoning, applications
+#   areas       any of: agents, evolving, reasoning, applications, rl (reinforcement learning)
 #   app_tag     sub-group inside "AI Applications" (Medical / Personalization / Trustworthy & Efficient)
 #   lead        true if Zihao is (co-)first author;  corresponding: true if (co-)corresponding
 #   authors     "*" = equal contribution, "†" = corresponding author
@@ -32,7 +32,7 @@
   venue: "arXiv preprint, 2026"
   short_venue: "Preprint"
   year: 2026
-  areas: [agents]
+  areas: [agents, rl]
   links:
     - { name: arXiv, url: "https://arxiv.org/abs/2609.24997" }
 
@@ -57,7 +57,7 @@
   links:
     - { name: arXiv, url: "https://arxiv.org/abs/2604.05076" }
 
-- abbr: Glitch Detection
+- abbr: VideoGlitchBench
   title: "Open-Ended Video Game Glitch Detection with Agentic Reasoning and Temporal Grounding"
   authors: "Muyang Zheng, Tong Zhou, Geyang Wu, Zihao Lin, Haibo Wang, Lifu Huang"
   venue: "ACM Multimedia (ACMMM) 2026"
@@ -84,7 +84,7 @@
   short_venue: "TMLR'26"
   note: "Spotlight, NeurIPS 2025 Workshop on Multimodal Algorithmic Reasoning"
   year: 2026
-  areas: [agents, reasoning]
+  areas: [agents, reasoning, rl]
   lead: true
   links:
     - { name: arXiv, url: "https://arxiv.org/abs/2601.04589" }
@@ -117,7 +117,7 @@
   venue: "AACL 2026"
   short_venue: "AACL'26"
   year: 2026
-  areas: [reasoning]
+  areas: [reasoning, rl]
   links:
     - { name: arXiv, url: "https://arxiv.org/abs/2512.17951" }
 

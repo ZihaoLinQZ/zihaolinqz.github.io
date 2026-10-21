@@ -1,0 +1,91 @@
+---
+layout: modern-page
+title: "Curriculum Vitae"
+permalink: /cv/
+nav: cv
+redirect_from:
+  - /resume
+---
+{%- assign profile = site.data.profile -%}
+{%- assign author = site.author -%}
+
+<div class="cv-actions">
+  <a class="btn" href="{{ profile.cv_pdf | relative_url }}"><i class="fas fa-file-arrow-down"></i> Download PDF</a>
+  <a class="btn btn-ghost" href="mailto:{{ author.email }}"><i class="fas fa-envelope"></i> {{ author.email }}</a>
+  <a class="btn btn-ghost" href="{{ author.googlescholar }}"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+</div>
+
+<section>
+  <h2>Education</h2>
+  <ul class="timeline">
+    {%- for e in profile.education %}
+    <li>
+      <div class="tl-main">
+        <span class="tl-org">{{ e.school }}</span>
+        <span class="tl-role">{{ e.degree }}</span>
+        {%- if e.detail %}<span class="tl-detail">{{ e.detail }}</span>{% endif %}
+        {%- if e.gpa %}<span class="tl-detail">GPA: {{ e.gpa }}</span>{% endif %}
+      </div>
+      <span class="tl-dates">{{ e.dates }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Research Experience</h2>
+  <ul class="timeline">
+    {%- for e in profile.experience %}
+    <li>
+      <div class="tl-main">
+        {%- if e.org_url %}<a class="tl-org" href="{{ e.org_url }}">{{ e.org }}</a>{% else %}<span class="tl-org">{{ e.org }}</span>{% endif %}
+        <span class="tl-role">{{ e.role }}</span>
+        <span class="tl-detail">{% if e.cv_only %}Lead{% else %}Host{% endif %}: {% if e.host_url %}<a href="{{ e.host_url }}">{{ e.host }}</a>{% else %}{{ e.host }}{% endif %}</span>
+      </div>
+      <span class="tl-dates">{{ e.dates }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <p class="legend">* equal contribution &nbsp;·&nbsp; † corresponding author</p>
+  <h3 class="year">First / Corresponding Author</h3>
+  <ol class="pubs">
+    {%- for p in site.data.publications %}{% if p.lead or p.corresponding %}{% include pub-item.html pub=p %}{% endif %}{% endfor %}
+  </ol>
+  <h3 class="year">Other Publications</h3>
+  <ol class="pubs">
+    {%- for p in site.data.publications %}{% unless p.lead or p.corresponding %}{% include pub-item.html pub=p %}{% endunless %}{% endfor %}
+  </ol>
+</section>
+
+<section>
+  <h2>Patent</h2>
+  <ul class="timeline">
+    {%- for t in profile.patents %}
+    <li>
+      <div class="tl-main">
+        <span class="tl-org">{{ t.title }}</span>
+        <span class="tl-role">{{ t.authors | replace: "Zihao Lin", "<strong>Zihao Lin</strong>" }}</span>
+        <span class="tl-detail">{{ t.detail }}</span>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Service</h2>
+  <p>{{ profile.service }}</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul class="kv">
+    {%- for s in profile.skills %}
+    <li><span>{{ s.name }}</span>{{ s.value }}</li>
+    {%- endfor %}
+  </ul>
+</section>

@@ -1,0 +1,46 @@
+---
+---
+{%- assign author = site.author -%}
+{%- assign home = '/' | relative_url -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.permalink == '/' %}{{ author.name }} · UC Davis{% else %}{{ page.title }} · {{ author.name }}{% endif %}</title>
+  <meta name="description" content="{{ author.name }}, Ph.D. student at UC Davis working on multimodal agents, self-evolving agents, and multimodal reasoning.">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  {% include analytics.html %}
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="{{ home }}">{{ author.name }}</a>
+    <nav class="nav">
+      <a href="{{ home }}#about">About</a>
+      <a href="{{ home }}#research">Research</a>
+      <a href="{{ home }}#news">News</a>
+      <a href="{{ home }}#publications">Publications</a>
+      <a href="{{ home }}#experience">Experience</a>
+      <a href="{{ '/year-archive/' | relative_url }}"{% if page.nav == 'blog' %} class="current"{% endif %}>Blog</a>
+      <a href="{{ '/cv/' | relative_url }}"{% if page.nav == 'cv' %} class="current"{% endif %}>CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+{{ content }}
+</main>
+
+<footer class="footer">
+  <div class="wrap">© {{ site.time | date: "%Y" }} {{ author.name }} · Last updated {{ site.time | date: "%B %Y" }}</div>
+</footer>
+</body>
+</html>

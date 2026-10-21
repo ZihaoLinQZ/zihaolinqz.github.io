@@ -1,0 +1,12 @@
+{%- assign p = include.pub -%}
+<li class="pub" data-areas="{{ p.areas | join: ' ' }}{% if p.lead or p.corresponding %} own{% endif %}">
+  <span class="badge">{{ p.short_venue }}</span>
+  <div class="pub-body">
+    <a class="pub-title" href="{{ p.links[0].url }}">{{ p.title }}</a>
+    <div class="pub-authors">{{ p.authors | replace: "Zihao Lin", "<strong>Zihao Lin</strong>" }}</div>
+    <div class="pub-venue"><em>{{ p.venue }}</em>{% if p.note %} <span class="award">{{ p.note }}</span>{% endif %}</div>
+    <div class="pub-links">
+      {%- for l in p.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
+    </div>
+  </div>
+</li>

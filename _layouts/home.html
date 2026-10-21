@@ -1,41 +1,9 @@
 ---
+layout: modern
 ---
 {%- assign author = site.author -%}
+{%- assign profile = site.data.profile -%}
 {%- assign pubs = site.data.publications -%}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ author.name }} · UC Davis</title>
-  <meta name="description" content="{{ author.name }}, Ph.D. student at UC Davis working on multimodal agents, self-evolving agents, and multimodal reasoning.">
-  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
-  {% include analytics.html %}
-</head>
-<body>
-
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="#top">{{ author.name }}</a>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#news">News</a>
-      <a href="#experience">Experience</a>
-      <a href="{{ '/year-archive/' | relative_url }}">Blog</a>
-      <a href="{{ '/cv/' | relative_url }}">CV</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top" class="wrap">
 
   <!-- Profile -->
   <section class="hero" id="about">
@@ -52,23 +20,23 @@
       </div>
       <div class="stats">
         <a class="stat" href="{{ author.googlescholar }}">
-          <span class="stat-num">{{ page.citations.total }}</span>
+          <span class="stat-num">{{ profile.citations.total }}</span>
           <span class="stat-label">Total citations</span>
         </a>
         <a class="stat" href="{{ author.googlescholar }}">
-          <span class="stat-num">{{ page.citations.first_corresponding }}</span>
+          <span class="stat-num">{{ profile.citations.first_corresponding }}</span>
           <span class="stat-label">First / corresponding-author citations</span>
         </a>
         <a class="stat" href="{{ author.googlescholar }}">
-          <span class="stat-num">{{ page.citations.h_index }}</span>
+          <span class="stat-num">{{ profile.citations.h_index }}</span>
           <span class="stat-label">h-index</span>
         </a>
       </div>
-      <p class="stat-note">Google Scholar, {{ page.citations.updated }}</p>
+      <p class="stat-note">Google Scholar, {{ profile.citations.updated }}</p>
     </div>
   </section>
 
-  <section class="bio">
+  <section class="bio prose">
     {{ content }}
   </section>
 
@@ -105,41 +73,6 @@
     <p class="legend"><span class="chip-dot"></span> First- or corresponding-author work</p>
   </section>
 
-  <!-- Publications -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="filters" role="tablist">
-      <button class="filter active" data-filter="all">All</button>
-      {%- for area in site.data.research %}
-      <button class="filter" data-filter="{{ area.key }}">{{ area.title }}</button>
-      {%- endfor %}
-      <button class="filter" data-filter="own">First / Corresponding</button>
-    </div>
-    <p class="legend">* equal contribution &nbsp;·&nbsp; † corresponding author</p>
-
-    {%- assign years = pubs | group_by: "year" %}
-    {%- for y in years %}
-    <div class="year-group">
-      <h3 class="year">{{ y.name }}</h3>
-      <ol class="pubs">
-        {%- for p in y.items %}
-        <li class="pub" data-areas="{{ p.areas | join: ' ' }}{% if p.lead or p.corresponding %} own{% endif %}">
-          <span class="badge">{{ p.short_venue }}</span>
-          <div class="pub-body">
-            <a class="pub-title" href="{{ p.links[0].url }}">{{ p.title }}</a>
-            <div class="pub-authors">{{ p.authors | replace: "Zihao Lin", "<strong>Zihao Lin</strong>" }}</div>
-            <div class="pub-venue"><em>{{ p.venue }}</em>{% if p.note %} <span class="award">{{ p.note }}</span>{% endif %}</div>
-            <div class="pub-links">
-              {%- for l in p.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
-            </div>
-          </div>
-        </li>
-        {%- endfor %}
-      </ol>
-    </div>
-    {%- endfor %}
-  </section>
-
   <!-- News -->
   <section id="news">
     <h2>News</h2>
@@ -153,11 +86,35 @@
     {%- endif %}
   </section>
 
+  <!-- Publications -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      {%- for area in site.data.research %}
+      <button class="filter" data-filter="{{ area.key }}">{{ area.title }}</button>
+      {%- endfor %}
+      <button class="filter" data-filter="rl">Reinforcement Learning</button>
+      <button class="filter" data-filter="own">First / Corresponding</button>
+    </div>
+    <p class="legend">* equal contribution &nbsp;·&nbsp; † corresponding author</p>
+
+    {%- assign years = pubs | group_by: "year" %}
+    {%- for y in years %}
+    <div class="year-group">
+      <h3 class="year">{{ y.name }}</h3>
+      <ol class="pubs">
+        {%- for p in y.items %}{% include pub-item.html pub=p %}{% endfor %}
+      </ol>
+    </div>
+    {%- endfor %}
+  </section>
+
   <!-- Experience -->
   <section id="experience">
     <h2>Experience</h2>
     <ul class="timeline">
-      {%- for e in page.experience %}
+      {%- for e in profile.experience %}{% unless e.cv_only %}
       <li>
         <div class="tl-main">
           <a class="tl-org" href="{{ e.org_url }}">{{ e.org }}</a>
@@ -166,12 +123,12 @@
         </div>
         <span class="tl-dates">{{ e.dates }}</span>
       </li>
-      {%- endfor %}
+      {%- endunless %}{% endfor %}
     </ul>
 
     <h2 class="sub">Education</h2>
     <ul class="timeline">
-      {%- for e in page.education %}
+      {%- for e in profile.education %}
       <li>
         <div class="tl-main">
           <span class="tl-org">{{ e.school }}</span>
@@ -184,13 +141,8 @@
     </ul>
 
     <h2 class="sub">Service</h2>
-    <p>{{ page.service }}</p>
+    <p>{{ profile.service }}</p>
   </section>
-</main>
-
-<footer class="footer">
-  <div class="wrap">© {{ site.time | date: "%Y" }} {{ author.name }} · Last updated {{ site.time | date: "%B %Y" }}</div>
-</footer>
 
 <script>
   (function () {
@@ -218,5 +170,3 @@
     });
   })();
 </script>
-</body>
-</html>

@@ -46,6 +46,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 [hidden] { display: none !important; }
 
 .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+main.wrap { min-height: calc(100vh - 180px); }
 
 /* Top bar */
 .topbar {
@@ -61,6 +62,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a { color: var(--muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
 .nav a:hover { color: var(--text); text-decoration: none; }
+.nav a.current { color: var(--accent); }
 
 /* Sections */
 main section { padding: 40px 0 8px; }
@@ -195,6 +197,31 @@ h3 { margin: 0; }
   font-size: 13px; color: var(--faint);
 }
 
+/* Inner pages (CV, Blog) */
+.page-head { padding: 56px 0 4px; }
+.page-head h1 { font: 600 36px/1.2 var(--serif); margin: 0; letter-spacing: -0.01em; }
+.page-sub { margin: 8px 0 0; color: var(--muted); }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 8px;
+  background: var(--accent); border: 1px solid var(--accent); color: #fff;
+  font-size: 14px; font-weight: 500;
+}
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+.btn-ghost { background: transparent; color: var(--muted); border-color: var(--border); }
+.btn-ghost:hover { color: var(--accent); border-color: var(--accent); filter: none; }
+.kv { list-style: none; margin: 0; padding: 0; }
+.kv li { padding: 4px 0; }
+.kv span { display: inline-block; width: 120px; font-weight: 600; }
+.empty-state {
+  margin-top: 32px; padding: 56px 24px; text-align: center;
+  border: 1px dashed var(--border); border-radius: 12px; color: var(--muted);
+}
+.empty-state i { font-size: 28px; color: var(--faint); }
+.empty-state p { margin: 12px 0 6px; font-size: 17px; color: var(--text); }
+.empty-state a { font-size: 14px; }
+
 /* Small screens */
 @media (max-width: 720px) {
   .wrap { padding: 0 16px; }
@@ -203,6 +230,9 @@ h3 { margin: 0; }
   .hero { flex-direction: column; align-items: flex-start; gap: 20px; padding-top: 32px; }
   .avatar { width: 120px; height: 120px; }
   .hero h1 { font-size: 32px; }
+  .page-head { padding-top: 32px; }
+  .page-head h1 { font-size: 28px; }
+  .kv span { display: block; width: auto; }
   .areas { grid-template-columns: 1fr; }
   .stats { flex-wrap: nowrap; gap: 8px; }
   .stat { min-width: 0; flex: 1 1 0; padding: 8px 10px; }
