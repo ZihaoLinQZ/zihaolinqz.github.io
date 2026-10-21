@@ -247,7 +247,8 @@
   venue: "ACL 2024"
   short_venue: "ACL'24"
   year: 2024
-  areas: [evolving]
+  areas: [applications]
+  app_tag: Trustworthy & Efficient
   lead: true
   links:
     - { name: Paper, url: "https://aclanthology.org/2024.acl-long.742/" }
