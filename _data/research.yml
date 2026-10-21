@@ -1,0 +1,17 @@
+# Research interests on the homepage. `key` matches `areas` in _data/publications.yml.
+- key: agents
+  title: "Multimodal Agents"
+  summary: "Agents that perceive, plan, and act over images, videos, documents, and 3D scenes by orchestrating vision-language models, tools, and multi-agent collaboration."
+
+- key: evolving
+  title: "Self-Evolving Agents"
+  summary: "Agents and agent harnesses that keep improving themselves from their own experience, through recursive self-improvement, branch-based optimization, and continual knowledge updates."
+
+- key: reasoning
+  title: "Multimodal Reasoning"
+  summary: "Understanding and strengthening how foundation models reason across modalities, from reasoning-driven generation and RL for flow models to retrieval-augmented and interpretable VLMs."
+
+- key: applications
+  title: "AI Applications"
+  summary: "Bringing these capabilities to high-impact domains such as medicine and personalization, while keeping models trustworthy and efficient."
+  groups: ["Medical", "Personalization", "Trustworthy & Efficient"]

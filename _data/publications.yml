@@ -1,0 +1,313 @@
+# Publications shown on the homepage, newest first.
+#   abbr        short name used on research-interest chips and the venue badge
+#   areas       any of: agents, evolving, reasoning, applications
+#   app_tag     sub-group inside "AI Applications" (Medical / Personalization / Trustworthy & Efficient)
+#   lead        true if Zihao is (co-)first author;  corresponding: true if (co-)corresponding
+#   authors     "*" = equal contribution, "†" = corresponding author
+
+- abbr: VideoHarness-SRSI
+  title: "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness"
+  authors: "Zihao Lin, Haoyu Dong, Haobo Xu, Chi-Chih Chang, Xuying Ning, Yinglong Xia, Shuang Yang, Zhuokai Zhao, Xinying Song, Dongfang Liu, Lifu Huang, Yang Song, Qifan Wang"
+  venue: "arXiv preprint, 2026"
+  short_venue: "Preprint"
+  year: 2026
+  areas: [evolving, agents]
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2610.19424" }
+
+- abbr: MoSIB
+  title: "Mixture of Self-Improving Branches For Agent Harness Optimization"
+  authors: "Haoyu Dong, Yuhang Zhou, Zihao Lin, Yifan Wu, Bo Peng, Mingyi Wang, Xiangjun Fan, Lizhu Zhang, Zhuokai Zhao"
+  venue: "arXiv preprint, 2026"
+  short_venue: "Preprint"
+  year: 2026
+  areas: [evolving]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2609.37834" }
+
+- abbr: VideoGen-Agent
+  title: "VideoGen-Agent: Reinforcing Video Generation Agents"
+  authors: "Binxu Li, Haoyi Duan, Yuhui Zhang, Yaohui Zhang, Zihao Lin, Kaituo Feng, Suozhi Huang, Xiangyi Li, Yu Li, Chunyuan Li, Shilong Liu, Mengdi Wang"
+  venue: "arXiv preprint, 2026"
+  short_venue: "Preprint"
+  year: 2026
+  areas: [agents]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2609.24997" }
+
+- abbr: UniTemp
+  title: "UniTemp: Unlocking Video Generation in Any Temporal Order via Bidirectional Distillation"
+  authors: "Lin Zhang, Sicheng Mo, Zefan Cai, Jinhong Lin, Zihao Lin, Jiuxiang Gu, Krishna Kumar Singh, Yuheng Li, Yin Li"
+  venue: "ECCV 2026"
+  short_venue: "ECCV'26"
+  year: 2026
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2606.18702" }
+
+- abbr: GLANCE
+  title: "GLANCE: A Global-Local Coordination Multi-Agent Framework for Music-Grounded Non-Linear Video Editing"
+  authors: "Zihao Lin, Haibo Wang, Zhiyang Xu, Siyao Dai, Huanjie Dong, Xiaohan Wang, Yolo Y. Tang, Yixin Wang, Qifan Wang, Lifu Huang"
+  venue: "ACM Multimedia (ACMMM) 2026"
+  short_venue: "MM'26"
+  year: 2026
+  areas: [agents]
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2604.05076" }
+
+- abbr: Glitch Detection
+  title: "Open-Ended Video Game Glitch Detection with Agentic Reasoning and Temporal Grounding"
+  authors: "Muyang Zheng, Tong Zhou, Geyang Wu, Zihao Lin, Haibo Wang, Lifu Huang"
+  venue: "ACM Multimedia (ACMMM) 2026"
+  short_venue: "MM'26"
+  year: 2026
+  areas: [agents, reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2604.07818" }
+
+- abbr: Think-Act-Build
+  title: "Think, Act, Build: An Agentic Framework with Vision Language Models for Zero-Shot 3D Visual Grounding"
+  authors: "Haibo Wang, Zihao Lin, Zhiyang Xu, Lifu Huang"
+  venue: "EMNLP 2026"
+  short_venue: "EMNLP'26"
+  year: 2026
+  areas: [agents]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2604.00528" }
+
+- abbr: MiLDEdit
+  title: "MiLDEdit: Reasoning-Based Multi-Layer Design Document Editing"
+  authors: "Zihao Lin, Wanrong Zhu, Jiuxiang Gu, Jihyung Kil, Christopher Tensmeyer, Lin Zhang, Shilong Liu, Ruiyi Zhang, Lifu Huang, Vlad I. Morariu, Tong Sun"
+  venue: "TMLR 2026"
+  short_venue: "TMLR'26"
+  note: "Spotlight, NeurIPS 2025 Workshop on Multimodal Algorithmic Reasoning"
+  year: 2026
+  areas: [agents, reasoning]
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2601.04589" }
+
+- abbr: UserSim Survey
+  title: "A Survey on LLM-based Conversational User Simulation"
+  authors: "Bo Ni, Leyao Wang, Yu Wang, Branislav Kveton, Franck Dernoncourt, ..., Zihao Lin, ..., Tyler Derr, Ryan A. Rossi"
+  venue: "EACL 2026"
+  short_venue: "EACL'26"
+  year: 2026
+  areas: [applications]
+  app_tag: Personalization
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2604.24977" }
+
+- abbr: DFedSalt
+  title: "Decentralized Partial Model Personalization With Guaranteed Nonconvex Convergence"
+  authors: "Yifan Shi, Yingqi Liu, Yan Sun, Zihao Lin, Xueqian Wang, Li Shen, Dacheng Tao"
+  venue: "IEEE Transactions on Networking, 2026"
+  short_venue: "IEEE ToN"
+  year: 2026
+  areas: [applications]
+  app_tag: Personalization
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2305.15157" }
+
+- abbr: SuperFlow
+  title: "SuperFlow: Training Flow Matching Models with RL on the Fly"
+  authors: "Kaijie Chen, Zhiyang Xu, Ying Shen, Zihao Lin, Yuguang Yao, Lifu Huang"
+  venue: "AACL 2026"
+  short_venue: "AACL'26"
+  year: 2026
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2512.17951" }
+
+- abbr: R2I-Bench
+  title: "R2I-Bench: Benchmarking Reasoning-Driven Text-to-Image Generation"
+  authors: "Kaijie Chen, Zihao Lin, Zhiyang Xu, Ying Shen, Yuguang Yao, Joy Rimchala, Jiaxin Zhang, Lifu Huang"
+  venue: "EMNLP 2025"
+  short_venue: "EMNLP'25"
+  year: 2025
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2505.23493" }
+
+- abbr: Knowing When to Stop
+  title: "Knowing When to Stop: Efficient Context Processing via Latent Sufficiency Signals"
+  authors: "Roy Xie, Junlin Wang, Paul Rosu, Chunyuan Deng, Bolun Sun, Zihao Lin, Bhuwan Dhingra"
+  venue: "NeurIPS 2025"
+  short_venue: "NeurIPS'25"
+  year: 2025
+  areas: [applications]
+  app_tag: Trustworthy & Efficient
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2502.01025" }
+
+- abbr: DiT Localization
+  title: "Localizing Knowledge in Diffusion Transformers"
+  authors: "Arman Zarei, Samyadeep Basu, Keivan Rezaei, Zihao Lin, Sayan Nag, Soheil Feizi"
+  venue: "NeurIPS 2025"
+  short_venue: "NeurIPS'25"
+  year: 2025
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2505.18832" }
+
+- abbr: MI Survey
+  title: "A Survey on Mechanistic Interpretability for Multi-Modal Foundation Models"
+  authors: "Zihao Lin, Samyadeep Basu, Mohammad Beigi, Varun Manjunatha, Ryan A. Rossi, Zichao Wang, Yufan Zhou, ..., Soheil Feizi, Lifu Huang"
+  venue: "arXiv preprint, 2025"
+  short_venue: "Preprint"
+  year: 2025
+  areas: [reasoning]
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2502.17516" }
+
+- abbr: RoRA-VLM
+  title: "RoRA-VLM: Robust Retrieval-Augmented Vision Language Models"
+  authors: "Jingyuan Qi, Zhiyang Xu, Rulin Shao, Zihao Lin, Yang Chen, Jin Di, Yu Cheng, Qifan Wang, Lifu Huang"
+  venue: "ICCV 2025 Workshop on Knowledge-Intensive Multimodal Reasoning"
+  short_venue: "ICCVW'25"
+  year: 2025
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2410.08876" }
+
+- abbr: Persona-SQ
+  title: "Persona-SQ: A Personalized Suggested Question Generation Framework For Real-world Documents"
+  authors: "Zihao Lin, Zichao Wang, Yuanting Pan, Varun Manjunatha, Ryan Rossi, Angela Lau, Lifu Huang, Tong Sun"
+  venue: "NAACL 2025 (System Demonstrations)"
+  short_venue: "NAACL'25"
+  year: 2025
+  areas: [applications]
+  app_tag: Personalization
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2412.12445" }
+
+- abbr: MMedAgent
+  title: "MMedAgent: Learning to Use Medical Tools with Multi-modal Agent"
+  authors: "Binxu Li, Tiankai Yan, Yuanting Pan, Jie Luo, Ruiyang Ji, Jiayuan Ding, Zhe Xu, Shilong Liu, Haoyu Dong, Zihao Lin†, Yixin Wang†"
+  venue: "Findings of EMNLP 2024"
+  short_venue: "EMNLP'24"
+  year: 2024
+  areas: [agents, applications]
+  app_tag: Medical
+  corresponding: true
+  links:
+    - { name: Paper, url: "https://aclanthology.org/2024.findings-emnlp.510/" }
+    - { name: arXiv, url: "https://arxiv.org/abs/2407.02483" }
+    - { name: Code, url: "https://github.com/Wangyixinxin/MMedAgent" }
+
+- abbr: ToolBeHonest
+  title: "ToolBeHonest: A Multi-level Hallucination Diagnostic Benchmark for Tool-Augmented Large Language Models"
+  authors: "Yuxiang Zhang, Jing Chen, Junjie Wang, Yaxin Liu, Cheng Yang, Chufan Shi, Xinyu Zhu, Zihao Lin, Hanwen Wan, Yujiu Yang, Tetsuya Sakai, Tian Feng, Hayato Yamana"
+  venue: "EMNLP 2024"
+  short_venue: "EMNLP'24"
+  year: 2024
+  areas: [agents]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2406.20015" }
+
+- abbr: InterleavedEval
+  title: "Holistic Evaluation for Interleaved Text-and-Image Generation"
+  authors: "Minqian Liu, Zhiyang Xu, Zihao Lin, Trevor Ashby, Joy Rimchala, Jiaxin Zhang, Lifu Huang"
+  venue: "EMNLP 2024"
+  short_venue: "EMNLP'24"
+  year: 2024
+  areas: [reasoning]
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2406.14643" }
+
+- abbr: InternalInspector
+  title: "InternalInspector: Robust Confidence Estimation in LLMs through Internal States"
+  authors: "Mohammad Beigi, Ying Shen, Runing Yang, Zihao Lin, Qifan Wang, Ankith Mohan, Jianfeng He, Ming Jin, Chang-Tien Lu, Lifu Huang"
+  venue: "Findings of EMNLP 2024"
+  short_venue: "EMNLP'24"
+  year: 2024
+  areas: [applications]
+  app_tag: Trustworthy & Efficient
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2406.12053" }
+
+- abbr: Uncertainty Review
+  title: "Rethinking the Uncertainty: A Critical Review and Analysis in the Era of Large Language Models"
+  authors: "Mohammad Beigi, Sijia Wang, Ying Shen, Zihao Lin, Adithya Kulkarni, Jianfeng He, Feng Chen, Ming Jin, Jin-Hee Cho, Dawei Zhou, Chang-Tien Lu, Lifu Huang"
+  venue: "arXiv preprint, 2024"
+  short_venue: "Preprint"
+  year: 2024
+  areas: [applications]
+  app_tag: Trustworthy & Efficient
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2410.20199" }
+
+- abbr: Memory Editing
+  title: "Navigating the Dual Facets: A Comprehensive Evaluation of Sequential Memory Editing in Large Language Models"
+  authors: "Zihao Lin, Mohammad Beigi, Hongxuan Li, Yufan Zhou, Yuxiang Zhang, Qifan Wang, Wenpeng Yin, Lifu Huang"
+  venue: "ACL 2024"
+  short_venue: "ACL'24"
+  year: 2024
+  areas: [evolving]
+  lead: true
+  links:
+    - { name: Paper, url: "https://aclanthology.org/2024.acl-long.742/" }
+    - { name: arXiv, url: "https://arxiv.org/abs/2402.11122" }
+
+- abbr: Trust It or Not
+  title: "Trust It or Not: Confidence-Guided Automatic Radiology Report Generation"
+  authors: "Zihao Lin*, Yixin Wang*, Zhe Xu, Haoyu Dong, Jiang Tian, Jie Luo, Zhongchao Shi, Lifu Huang, Yang Zhang, Jianping Fan, Zhiqiang He"
+  venue: "Neurocomputing, 2024"
+  short_venue: "Neurocomputing"
+  year: 2024
+  areas: [applications]
+  app_tag: Medical
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2106.10887" }
+
+- abbr: Fed-BBPT
+  title: "Efficient Federated Prompt Tuning for Black-Box Large Pre-trained Models"
+  authors: "Zihao Lin, Yan Sun, Yifan Shi, Xueqian Wang, Lifu Huang, Li Shen, Dacheng Tao"
+  venue: "arXiv preprint, 2023"
+  short_venue: "Preprint"
+  year: 2023
+  areas: [applications]
+  app_tag: Trustworthy & Efficient
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2310.03123" }
+
+- abbr: Disease-KG
+  title: "Rethinking Medical Report Generation: Disease Revealing Enhancement with Knowledge Graph"
+  authors: "Zihao Lin*, Yixin Wang*, Haoyu Dong*"
+  venue: "ICML 2023 Workshop on Interpretable Machine Learning in Healthcare (IMLH)"
+  short_venue: "ICMLW'23"
+  year: 2023
+  areas: [applications]
+  app_tag: Medical
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2307.12526" }
+
+- abbr: Prompt Adapter
+  title: "Prompt Tuning based Adapter for Vision-Language Model Adaption"
+  authors: "Jingchen Sun, Jiayu Qin, Zihao Lin, Changyou Chen"
+  venue: "arXiv preprint, 2023"
+  short_venue: "Preprint"
+  year: 2023
+  areas: []
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2303.15234" }
+
+- abbr: ACN
+  title: "ACN: Adversarial Co-training Network for Brain Tumor Segmentation with Missing Modalities"
+  authors: "Yixin Wang, Yang Zhang, Yang Liu, Zihao Lin, Jiang Tian, Cheng Zhong, Zhongchao Shi, Jianping Fan, Zhiqiang He"
+  venue: "MICCAI 2021"
+  short_venue: "MICCAI'21"
+  year: 2021
+  areas: [applications]
+  app_tag: Medical
+  links:
+    - { name: Paper, url: "https://link.springer.com/chapter/10.1007/978-3-030-87234-2_39" }
+    - { name: arXiv, url: "https://arxiv.org/abs/2106.14591" }
+    - { name: Code, url: "https://github.com/Wangyixinxin/ACN" }

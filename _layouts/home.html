@@ -1,0 +1,222 @@
+---
+---
+{%- assign author = site.author -%}
+{%- assign pubs = site.data.publications -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ author.name }} · UC Davis</title>
+  <meta name="description" content="{{ author.name }}, Ph.D. student at UC Davis working on multimodal agents, self-evolving agents, and multimodal reasoning.">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  {% include analytics.html %}
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">{{ author.name }}</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#experience">Experience</a>
+      <a href="{{ '/year-archive/' | relative_url }}">Blog</a>
+      <a href="{{ '/cv/' | relative_url }}">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <!-- Profile -->
+  <section class="hero" id="about">
+    <img class="avatar" src="{{ '/images/' | append: author.avatar | relative_url }}" alt="Portrait of {{ author.name }}">
+    <div class="hero-body">
+      <h1>{{ author.name }}</h1>
+      <p class="affil">Ph.D. Student in Computer Science · University of California, Davis</p>
+      <div class="links">
+        <a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar"></i> Scholar</a>
+        <a href="https://github.com/{{ author.github }}"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:{{ author.email }}"><i class="fas fa-envelope"></i> Email</a>
+        <a href="{{ '/cv/' | relative_url }}"><i class="fas fa-file-lines"></i> CV</a>
+      </div>
+      <div class="stats">
+        <a class="stat" href="{{ author.googlescholar }}">
+          <span class="stat-num">{{ page.citations.total }}</span>
+          <span class="stat-label">Total citations</span>
+        </a>
+        <a class="stat" href="{{ author.googlescholar }}">
+          <span class="stat-num">{{ page.citations.first_corresponding }}</span>
+          <span class="stat-label">First / corresponding-author citations</span>
+        </a>
+        <a class="stat" href="{{ author.googlescholar }}">
+          <span class="stat-num">{{ page.citations.h_index }}</span>
+          <span class="stat-label">h-index</span>
+        </a>
+      </div>
+      <p class="stat-note">Google Scholar, {{ page.citations.updated }}</p>
+    </div>
+  </section>
+
+  <section class="bio">
+    {{ content }}
+  </section>
+
+  <!-- Research interests -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <div class="areas">
+      {%- for area in site.data.research %}
+      <article class="area">
+        <div class="area-head">
+          <span class="area-num">0{{ forloop.index }}</span>
+          <h3>{{ area.title }}</h3>
+        </div>
+        <p class="area-summary">{{ area.summary }}</p>
+        {%- if area.groups %}
+          {%- for g in area.groups %}
+          <div class="chip-row">
+            <span class="chip-group">{{ g }}</span>
+            {%- for p in pubs %}{% if p.areas contains area.key and p.app_tag == g %}
+            <a class="chip{% if p.lead or p.corresponding %} chip-own{% endif %}" href="{{ p.links[0].url }}" title="{{ p.title }}">{{ p.abbr }}<small>{{ p.short_venue }}</small></a>
+            {%- endif %}{% endfor %}
+          </div>
+          {%- endfor %}
+        {%- else %}
+          <div class="chip-row">
+            {%- for p in pubs %}{% if p.areas contains area.key %}
+            <a class="chip{% if p.lead or p.corresponding %} chip-own{% endif %}" href="{{ p.links[0].url }}" title="{{ p.title }}">{{ p.abbr }}<small>{{ p.short_venue }}</small></a>
+            {%- endif %}{% endfor %}
+          </div>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="legend"><span class="chip-dot"></span> First- or corresponding-author work</p>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="filters" role="tablist">
+      <button class="filter active" data-filter="all">All</button>
+      {%- for area in site.data.research %}
+      <button class="filter" data-filter="{{ area.key }}">{{ area.title }}</button>
+      {%- endfor %}
+      <button class="filter" data-filter="own">First / Corresponding</button>
+    </div>
+    <p class="legend">* equal contribution &nbsp;·&nbsp; † corresponding author</p>
+
+    {%- assign years = pubs | group_by: "year" %}
+    {%- for y in years %}
+    <div class="year-group">
+      <h3 class="year">{{ y.name }}</h3>
+      <ol class="pubs">
+        {%- for p in y.items %}
+        <li class="pub" data-areas="{{ p.areas | join: ' ' }}{% if p.lead or p.corresponding %} own{% endif %}">
+          <span class="badge">{{ p.short_venue }}</span>
+          <div class="pub-body">
+            <a class="pub-title" href="{{ p.links[0].url }}">{{ p.title }}</a>
+            <div class="pub-authors">{{ p.authors | replace: "Zihao Lin", "<strong>Zihao Lin</strong>" }}</div>
+            <div class="pub-venue"><em>{{ p.venue }}</em>{% if p.note %} <span class="award">{{ p.note }}</span>{% endif %}</div>
+            <div class="pub-links">
+              {%- for l in p.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
+            </div>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+    {%- endfor %}
+  </section>
+
+  <!-- News -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      {%- for n in site.data.news %}
+      <li{% if forloop.index > 8 %} class="more"{% endif %}><span class="news-date">{{ n.date }}</span><span>{{ n.text }}</span></li>
+      {%- endfor %}
+    </ul>
+    {%- if site.data.news.size > 8 %}
+    <button class="show-more" id="news-toggle">Show more</button>
+    {%- endif %}
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      {%- for e in page.experience %}
+      <li>
+        <div class="tl-main">
+          <a class="tl-org" href="{{ e.org_url }}">{{ e.org }}</a>
+          <span class="tl-role">{{ e.role }}</span>
+          <span class="tl-detail">Host: <a href="{{ e.host_url }}">{{ e.host }}</a></span>
+        </div>
+        <span class="tl-dates">{{ e.dates }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2 class="sub">Education</h2>
+    <ul class="timeline">
+      {%- for e in page.education %}
+      <li>
+        <div class="tl-main">
+          <span class="tl-org">{{ e.school }}</span>
+          <span class="tl-role">{{ e.degree }}</span>
+          {%- if e.detail %}<span class="tl-detail">{{ e.detail }}</span>{% endif %}
+        </div>
+        <span class="tl-dates">{{ e.dates }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2 class="sub">Service</h2>
+    <p>{{ page.service }}</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">© {{ site.time | date: "%Y" }} {{ author.name }} · Last updated {{ site.time | date: "%B %Y" }}</div>
+</footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.filter');
+    var groups = document.querySelectorAll('.year-group');
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        buttons.forEach(function (x) { x.classList.toggle('active', x === b); });
+        groups.forEach(function (g) {
+          var shown = 0;
+          g.querySelectorAll('.pub').forEach(function (p) {
+            var ok = f === 'all' || p.getAttribute('data-areas').split(' ').indexOf(f) !== -1;
+            p.hidden = !ok;
+            if (ok) shown++;
+          });
+          g.hidden = shown === 0;
+        });
+      });
+    });
+    var t = document.getElementById('news-toggle');
+    if (t) t.addEventListener('click', function () {
+      var open = document.querySelector('.news').classList.toggle('open');
+      t.textContent = open ? 'Show less' : 'Show more';
+    });
+  })();
+</script>
+</body>
+</html>
