@@ -16,6 +16,18 @@
   links:
     - { name: arXiv, url: "https://arxiv.org/abs/2610.19424" }
 
+- abbr: MMedAgent-Plus
+  title: "MMedAgent-Plus: Scaling Multimodal Medical Agents across Modalities, Tasks and Workflows"
+  authors: "Ruoxin Wang, Yuanting Pan, Binxu Li, Ruiyang Ji, Yaqian Chen, Jiayuan Ding, Qifan Wang, Lifu Huang, Mingjie Li, Yu Zhang, Ehsan Adeli, Kilian Pohl, Zhe Xu, Zihao Lin†, Haoyu Dong, Yixin Wang"
+  venue: "arXiv preprint, 2026"
+  short_venue: "Preprint"
+  year: 2026
+  areas: [agents, applications]
+  app_tag: Medical
+  corresponding: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2610.27233" }
+
 - abbr: MoSIB
   title: "Mixture of Self-Improving Branches For Agent Harness Optimization"
   authors: "Haoyu Dong, Yuhang Zhou, Zihao Lin, Yifan Wu, Bo Peng, Mingyi Wang, Xiangjun Fan, Lizhu Zhang, Zhuokai Zhao"
