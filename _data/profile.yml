@@ -2,8 +2,8 @@
 
 # Google Scholar statistics shown on the homepage. Update these by hand.
 citations:
-  total: 974
-  first_corresponding: 426
+  total: "900+"
+  first_corresponding: "450+"
   h_index: 14
   updated: "Oct 2026"
 
@@ -57,7 +57,7 @@ education:
     gpa: "3.76/4.0"
     dates: "2015 – 2019"
 
-service: "Reviewer for ACL ARR (2024–2026), EMNLP (2024–2026), ICLR (2025–2026), NAACL (2025–2026), COLM (2025–2026), AAAI (2026), and ECCV (2026)."
+service: "Area Chair for ACL ARR (2026). Reviewer for ACL ARR (2024–2026), EMNLP (2024–2026), ICLR (2025–2026), NAACL (2025–2026), COLM (2025–2026), AAAI (2026), ECCV (2026), and WWW (2026)."
 
 patents:
   - title: "Suggested Question Generation Using Machine-Learning"
