@@ -5,6 +5,17 @@
 #   lead        true if Zihao is (co-)first author;  corresponding: true if (co-)corresponding
 #   authors     "*" = equal contribution, "†" = corresponding author
 
+- abbr: Confident First, Reflective Second
+  title: "Confident First, Reflective Second: Reinforcement Learning of Confidence-Preserving Reflection for Video Understanding"
+  authors: "Zihao Lin, Jingyuan Liu, Yucheng Zhang, Yuguang Yao, Lifu Huang"
+  venue: "arXiv preprint, 2026"
+  short_venue: "Preprint"
+  year: 2026
+  areas: [reasoning, rl]
+  lead: true
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2610.36467" }
+
 - abbr: VideoHarness-SRSI
   title: "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness"
   authors: "Zihao Lin, Haoyu Dong, Haobo Xu, Chi-Chih Chang, Xuying Ning, Yinglong Xia, Shuang Yang, Zhuokai Zhao, Xinying Song, Dongfang Liu, Lifu Huang, Yang Song, Qifan Wang"
